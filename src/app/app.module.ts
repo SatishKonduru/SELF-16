@@ -11,6 +11,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { StyleBindingComponent } from './components/style-binding/style-binding.component';
 import { ClassBindingComponent } from './components/class-binding/class-binding.component';
+import { EventBindingComponent } from './components/event-binding/event-binding.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,7 @@ import { ClassBindingComponent } from './components/class-binding/class-binding.
     PropertyBindingComponent,
     StyleBindingComponent,
     ClassBindingComponent,
+    EventBindingComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +33,10 @@ import { ClassBindingComponent } from './components/class-binding/class-binding.
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
