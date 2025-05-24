@@ -10,6 +10,7 @@ import { PropertyBindingComponent } from './components/property-binding/property
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { StyleBindingComponent } from './components/style-binding/style-binding.component';
+import { ClassBindingComponent } from './components/class-binding/class-binding.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { StyleBindingComponent } from './components/style-binding/style-binding.
     InterpolationComponent,
     PropertyBindingComponent,
     StyleBindingComponent,
+    ClassBindingComponent,
   ],
   imports: [
     BrowserModule,
