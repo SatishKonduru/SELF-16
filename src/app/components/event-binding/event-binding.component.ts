@@ -32,13 +32,17 @@ export class EventBindingComponent {
   onDoubleClick() {
     this.result = 'You double clicked the button';
   }
-  onInput(event: Event) {
-    const value = (event.target as HTMLInputElement).value;
-    this.inputValue = value;
-  }
-  onChange(event: MatSelectChange) {
-    this.selectedValue = event.value;
-  }
+  // onInput(event: Event) {
+  //   const value = (event.target as HTMLInputElement).value;
+  //   this.inputValue = value;
+  // }
+  onInput = (value: any) => (this.inputValue = value);
+
+  // onChange(event: MatSelectChange) {
+  //   this.selectedValue = event.value;
+  // }
+
+  onChange = (event: MatSelectChange) => (this.selectedValue = event.value);
   onCheckboxChange(event: MatCheckboxChange) {
     this.isChecked = event.checked;
   }
@@ -54,9 +58,11 @@ export class EventBindingComponent {
   onEnterKey() {
     this.keyEnterValue = 'Enter key pressed';
   }
-  onFocus() {
-    this.focusValue = 'Input focused';
-  }
+  // onFocus() {
+  //   this.focusValue = 'Input focused';
+  // }
+
+  onFocus = () => (this.focusValue = 'Input got Focused');
   onBlur() {
     this.focusValue = ' Input lost focus';
   }
@@ -69,40 +75,34 @@ export class EventBindingComponent {
   onMouseLeave() {
     console.log('Mouse leave');
   }
-  onRightClick(event: MouseEvent) {
+  onRightClick = (event: MouseEvent) => {
     event.preventDefault(); //to avoid opening right-click window
     this.contextValue = 'Right click';
-  }
-  onDragStart(event: DragEvent) {
+  };
+  onDragStart = (event: DragEvent) => {
     this.dragStatus = 'Dragging started...';
     // Set the ID of the dragged element
     event.dataTransfer?.setData('text/plain', 'dragItem');
-  }
+  };
 
-  onDragOver(event: DragEvent) {
+  onDragOver = (event: DragEvent) => {
     event.preventDefault(); // Important to allow dropping
-    const draggedElementId = event.dataTransfer?.getData('text/plain');
-    const draggedElement = document.getElementById(draggedElementId!);
-    const dropZone = document.getElementById('dropZone');
     this.dragStatus = 'Over the drop zone!';
-    if (draggedElement && dropZone) {
-      dropZone.appendChild(draggedElement);
-      this.dragStatus = 'Dropped and moved successfully!';
-    }
-  }
+  };
 
-  onDrop(event: DragEvent) {
+  onDrop = (event: DragEvent) => {
     event.preventDefault();
     const draggedElementId = event.dataTransfer?.getData('text/plain');
     const draggedElement = document.getElementById(draggedElementId!);
     const dropZone = document.getElementById('dropZone');
 
-    if (draggedElement && dropZone) {
+    if (draggedElementId && dropZone) {
       dropZone.appendChild(draggedElement);
       this.dragStatus = 'Dropped and moved successfully!';
+    } else {
+      this.dragStatus = 'Dropped Fail!';
     }
-    this.dragStatus = 'Dropped successfully!';
-  }
+  };
   onScroll(event: Event) {
     this.scrollStatus = 'You Scrolled';
   }

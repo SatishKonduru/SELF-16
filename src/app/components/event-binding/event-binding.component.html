@@ -23,7 +23,7 @@
 </p>
 <!-- Input Event -->
 <div style="display: flex; justify-content: center">
-  <input type="text" matInput (input)="onInput($event)" />
+  <input type="text" matInput (input)="onInput($event.target.value)" />
 </div>
 <p style="font-size: 20px; color: purple; margin: 20px auto; width: 500px">
   Input Value: {{ inputValue }}
@@ -106,17 +106,20 @@
 </div>
 <!-- Right Click / Context Menu -->
 <div
-  style="
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    background-color: rgb(110, 68, 15);
-    cursor: pointer;
-    color: white;
-  "
+  style="display: flex; justify-content: center"
   (contextmenu)="onRightClick($event)"
 >
-  Right Click me
+  <p
+    style="
+      width: 25%;
+      height: 50px;
+      background-color: rgb(110, 68, 15);
+      cursor: pointer;
+      color: white;
+    "
+  >
+    Right Click me
+  </p>
 </div>
 <p style="font-size: 20px; color: purple; margin: 20px auto; width: 500px">
   Context Value: {{ contextValue }}
