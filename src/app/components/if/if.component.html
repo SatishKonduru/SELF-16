@@ -1,11 +1,11 @@
 <div style="display: flex; justify-content: center">
-  <p style="font-size: 25px">*ngIf</p>
+  <p style="font-size: 25px; color: purple">*ngIf</p>
 </div>
-<!-- <p *ngIf="isLoggedIn">Welcome user!</p> -->
-<!-- <p *ngIf="isLoggedIn; else loggedOut">Welcome back!</p>
+<p *ngIf="isLoggedIn">Welcome user!</p>
+<p *ngIf="isLoggedIn; else loggedOut">Welcome back!</p>
 <ng-template #loggedOut>
   <p>Please log in.</p>
-</ng-template> -->
+</ng-template>
 
 <ng-container
   *ngIf="isLoading; then loadingBlock; else contentBlock"
