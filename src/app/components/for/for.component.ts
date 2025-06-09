@@ -7,7 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ForComponent {
   fruits = ['Apple', 'Banana', 'Mango'];
-  users = [{ name: 'Satish' }, { name: 'Renu' }, { name: 'RSK' }];
+  users = [
+    { name: 'Satish' },
+    { name: 'Renu' },
+    { name: 'Konduru' },
+    { name: 'RSK' },
+  ];
   products = [
     { id: 1, name: 'Laptop', inStock: true },
     { id: 2, name: 'Phone', inStock: false },
