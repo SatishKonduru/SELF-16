@@ -21,6 +21,7 @@ import { TwoWayDataBindingComponent } from './components/two-way-data-binding/tw
 import { FormsModule } from '@angular/forms';
 import { IfComponent } from './components/if/if.component';
 import { SwitchComponent } from './components/switch/switch.component';
+import { ForComponent } from './components/for/for.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { SwitchComponent } from './components/switch/switch.component';
     TwoWayDataBindingComponent,
     IfComponent,
     SwitchComponent,
+    ForComponent,
   ],
   imports: [
     BrowserModule,

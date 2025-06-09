@@ -1,0 +1,60 @@
+<div style="display: flex; justify-content: center">
+  <p style="font-size: 25px">*ngFor</p>
+</div>
+<ul>
+  <li *ngFor="let fruit of fruits">{{ fruit }}</li>
+</ul>
+<ul>
+  <li *ngFor="let item of fruits; index as i">{{ i + 1 }}. {{ item }}</li>
+</ul>
+<ul>
+  <li *ngFor="let user of users; first as isFirst; last as isLast">
+    {{ user.name }}
+    <span *ngIf="isFirst"> (First)</span>
+    <span *ngIf="isLast"> (Last)</span>
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let product of products">
+    {{ product.name }}
+  </li>
+</ul>
+<!-- Nested *ngFor -->
+<div *ngFor="let category of categories">
+  <h4>{{ category.name }}</h4>
+  <ul>
+    <li *ngFor="let item of category.items">{{ item }}</li>
+  </ul>
+</div>
+<!-- *ngFor + *ngIf combo -->
+<!-- We will get Empty lists for false conditions -->
+<ul>
+  <li *ngFor="let product of products">
+    <span *ngIf="product.inStock">{{ product.name }}</span>
+  </li>
+</ul>
+
+<!-- Solution -->
+<ul>
+  <ng-container *ngFor="let product of products">
+    <li *ngIf="product.inStock">
+      {{ product.name }}
+    </li>
+  </ng-container>
+</ul>
+<!-- Loop through an object’s keys -->
+<ul>
+  <li *ngFor="let item of myObj | keyvalue">
+    {{ item.key }}: {{ item.value }}
+  </li>
+</ul>
+<mat-form-field appearance="outline">
+  <mat-select [(ngModel)]="selectedCity">
+    <mat-option value="" disabled>Choose</mat-option>
+    <mat-option *ngFor="let city of cities" [value]="city">{{
+      city
+    }}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<p>You selected: {{ selectedCity }}</p>
