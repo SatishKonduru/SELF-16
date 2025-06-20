@@ -1,0 +1,40 @@
+<!-- <div class="container">
+  <app-question *ngFor="let q of questions" [question]="q"></app-question>
+
+  <button mat-stroked-button (click)="checkAnswers()">
+    Check If All Answered
+  </button>
+  <p *ngIf="allAnswered">✅ All questions answered!</p>
+  <p *ngIf="!allAnswered && checked">❌ Some questions are unanswered.</p>
+</div> -->
+<!-- Dynamic Add/Removing Questions -->
+<div class="container mt-3">
+  <div *ngFor="let q of newQuestions; let i = index" class="d-flex">
+    <app-question [question]="q.text"></app-question>
+    <button mat-flat-button color="warn" (click)="removeQuestion(i)">
+      🗑️ Remove
+    </button>
+  </div>
+
+  <mat-form-field appearance="outline">
+    <mat-label>New Question: </mat-label>
+    <input
+      matInput
+      type="text"
+      [(ngModel)]="newQuestion"
+      placeholder="New question..."
+    />
+  </mat-form-field>
+
+  <button mat-stroked-button color="warn" (click)="addQuestion()">
+    ➕ Add Question
+  </button>
+
+  <hr />
+  <button mat-raised-button color="primary" (click)="checkAnswers()">
+    Check If All Answered
+  </button>
+
+  <p *ngIf="allAnswered">✅ All questions answered!</p>
+  <p *ngIf="!allAnswered && checked">❌ Some questions are unanswered.</p>
+</div>

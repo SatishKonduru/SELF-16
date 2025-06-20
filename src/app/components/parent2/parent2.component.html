@@ -1,0 +1,23 @@
+<mat-form-field appearance="outline">
+  <mat-label>Enter Something...</mat-label>
+  <input matInput #inputBox type="text" />
+</mat-form-field>
+<br />
+<mat-form-field appearance="outline">
+  <mat-label>Enter Something...</mat-label>
+  <input matInput #inputBox />
+</mat-form-field>
+<br />
+<mat-form-field appearance="outline">
+  <mat-label>Enter Something...</mat-label>
+  <input matInput #inputBox />
+</mat-form-field>
+<br />
+<button (click)="logValues()" mat-raised-button>Log All Inputs</button>
+<p>
+  <app-child2></app-child2>
+  <app-child2></app-child2>
+  <app-child2></app-child2>
+  <br />
+  <button (click)="greetAll()">Greet All Children</button>
+</p>
