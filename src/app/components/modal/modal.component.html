@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="modal-container">
+    <!-- Inject header -->
+    <div class="modal-header">
+      <ng-content select="app-modal-header"></ng-content>
+    </div>
+
+    <!-- Inject body -->
+    <div class="modal-body">
+      <ng-content select="[modal-body]"></ng-content>
+    </div>
+
+    <!-- Inject footer -->
+    <div class="modal-footer">
+      <ng-content select=".footer"></ng-content>
+    </div>
+  </div>
+</div>

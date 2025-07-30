@@ -1,0 +1,16 @@
+<div
+  class="container"
+  style="border: 2px solid green; padding: 10px; background-color: aliceblue"
+>
+  <h2>This is Child Panel Component:</h2>
+  <strong style="color: green">
+    The following content getting from parent and showing with "ng-content"
+  </strong>
+  <ng-content></ng-content>
+
+  <strong style="color: blue">
+    The following content getting from parent and showing with instance of
+    ContentChild()
+  </strong>
+  <h5>{{ paragraph }}</h5>
+</div>

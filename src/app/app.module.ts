@@ -32,6 +32,12 @@ import { Parent2Component } from './components/parent2/parent2.component';
 import { Child2Component } from './components/child2/child2.component';
 import { QuestionnaireComponent } from './components/questionnaire/questionnaire.component';
 import { QuestionComponent } from './components/question/question.component';
+import { ParentPanelComponent } from './components/parent-panel/parent-panel.component';
+import { ChildPanelComponent } from './components/child-panel/child-panel.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { ModalFooterComponent } from './components/modal-footer/modal-footer.component';
+import { ModalHeaderComponent } from './components/modal-header/modal-header.component';
+import { ModalBodyComponent } from './components/modal-body/modal-body.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +63,12 @@ import { QuestionComponent } from './components/question/question.component';
     Child2Component,
     QuestionnaireComponent,
     QuestionComponent,
+    ParentPanelComponent,
+    ChildPanelComponent,
+    ModalComponent,
+    ModalFooterComponent,
+    ModalHeaderComponent,
+    ModalBodyComponent,
   ],
   imports: [
     BrowserModule,
