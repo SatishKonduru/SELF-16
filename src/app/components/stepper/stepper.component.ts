@@ -1,4 +1,10 @@
-import { Component, ContentChildren, QueryList } from '@angular/core';
+import {
+  Component,
+  computed,
+  ContentChildren,
+  QueryList,
+  signal,
+} from '@angular/core';
 import { StepComponent } from '../step/step.component';
 
 @Component({
@@ -7,6 +13,7 @@ import { StepComponent } from '../step/step.component';
   styleUrls: ['./stepper.component.css'],
 })
 export class StepperComponent {
+  topicName = '@ContentChildren()';
   @ContentChildren(StepComponent) steps!: QueryList<StepComponent>;
 
   stepTitles: string[] = [];
