@@ -38,6 +38,8 @@ import { ModalComponent } from './components/modal/modal.component';
 import { ModalFooterComponent } from './components/modal-footer/modal-footer.component';
 import { ModalHeaderComponent } from './components/modal-header/modal-header.component';
 import { ModalBodyComponent } from './components/modal-body/modal-body.component';
+import { StepComponent } from './components/step/step.component';
+import { StepperComponent } from './components/stepper/stepper.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import { ModalBodyComponent } from './components/modal-body/modal-body.component
     ModalFooterComponent,
     ModalHeaderComponent,
     ModalBodyComponent,
+    StepComponent,
+    StepperComponent,
   ],
   imports: [
     BrowserModule,
