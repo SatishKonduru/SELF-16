@@ -40,6 +40,11 @@ import { ModalHeaderComponent } from './components/modal-header/modal-header.com
 import { ModalBodyComponent } from './components/modal-body/modal-body.component';
 import { StepComponent } from './components/step/step.component';
 import { StepperComponent } from './components/stepper/stepper.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { PermissionDirective } from './directives/permission.directive';
+import { HomeComponent } from './components/home/home.component';
+import { IfNotDirective } from './directives/if-not.directive';
+import { RepeatDirective } from './directives/repeat.directive';
 
 @NgModule({
   declarations: [
@@ -73,6 +78,11 @@ import { StepperComponent } from './components/stepper/stepper.component';
     ModalBodyComponent,
     StepComponent,
     StepperComponent,
+    HighlightDirective,
+    PermissionDirective,
+    HomeComponent,
+    IfNotDirective,
+    RepeatDirective,
   ],
   imports: [
     BrowserModule,

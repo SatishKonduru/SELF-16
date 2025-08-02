@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>🎯 Custom Structural Directives Demo</h2>
+
+  <!-- appPermission -->
+  <div *appPermission="'admin'" class="box admin">
+    ✅ Only visible to admins
+  </div>
+
+  <!-- appIfNot -->
+  <div *appIfNot="isLoggedIn" class="box guest">❌ You are not logged in</div>
+
+  <!-- appRepeat -->
+  <div *appRepeat="repeatCount" class="box repeat">🔁 Repeated Block</div>
+</div>
