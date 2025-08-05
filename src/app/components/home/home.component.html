@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>🎯 Custom Structural Directives Demo</h2>
+   <app-topic [topic] = "'🎯 Custom Structural Directives Demo'"></app-topic>
 
   <!-- appPermission -->
   <div *appPermission="'admin'" class="box admin">
@@ -11,4 +11,8 @@
 
   <!-- appRepeat -->
   <div *appRepeat="repeatCount" class="box repeat">🔁 Repeated Block</div>
+
+  <h3>Hover to highlight 👇</h3>
+<p appHighlight="lightgreen" class="box">Hover me to see highlight</p>
 </div>
+
