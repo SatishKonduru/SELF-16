@@ -5,6 +5,7 @@
       color="primary"
       routerLink="/course"
       routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}"
     >
       <mat-icon class="check-icon">check</mat-icon>
       Course
@@ -15,6 +16,7 @@
       color="warn"
       [routerLink]="'/courseDetails'"
       routerLinkActive="active"
+       [routerLinkActiveOptions]="{exact: true}"
     >
       <mat-icon class="check-icon">check</mat-icon>
       Course Details
