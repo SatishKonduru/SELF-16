@@ -45,6 +45,12 @@ import { PermissionDirective } from './directives/permission.directive';
 import { HomeComponent } from './components/home/home.component';
 import { IfNotDirective } from './directives/if-not.directive';
 import { RepeatDirective } from './directives/repeat.directive';
+import { HeaderComponent } from './components/header/header.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { CourseComponent } from './components/course/course.component';
+import { CourseDetailsComponent } from './components/course-details/course-details.component';
+import { RouterModule, RouterOutlet } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -83,6 +89,9 @@ import { RepeatDirective } from './directives/repeat.directive';
     HomeComponent,
     IfNotDirective,
     RepeatDirective,
+    HeaderComponent,
+    CourseComponent,
+    CourseDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -95,6 +104,9 @@ import { RepeatDirective } from './directives/repeat.directive';
     MatCheckboxModule,
     MatRadioModule,
     FormsModule,
+    MatToolbarModule,
+    RouterModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
