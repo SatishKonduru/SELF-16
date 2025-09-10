@@ -1,14 +1,17 @@
+<div class="container">
+
+
 <h1 id="title">Angular Documentation</h1>
 
 <nav>
-  <a [routerLink]="['/docs']" fragment="installation">Installation</a> |
+  <a [routerLink]="'/docs'" fragment="installation">Installation</a> |
   <a [routerLink]="['/docs']" fragment="usage">Usage</a> |
   <a [routerLink]="['/docs']" fragment="faq">FAQ</a>
 </nav>
 
 <section
   id="installation"
-  style="margin-top: 100px; height: 100vh; background-color: antiquewhite"
+  style=" height: 100vh; background-color: antiquewhite"
 >
   <h2>Installation</h2>
   <p>Steps to install Angular...</p>
@@ -17,7 +20,7 @@
 
 <section
   id="usage"
-  style="margin-top: 100px; height: 100vh; background-color: burlywood"
+  style=" height: 100vh; background-color: burlywood"
 >
   <h2>Usage</h2>
   <p>How to use Angular...</p>
@@ -26,9 +29,10 @@
 
 <section
   id="faq"
-  style="margin-top: 100px; height: 100vh; background-color: hotpink"
+  style="height: 100vh; background-color: hotpink"
 >
   <h2>FAQ</h2>
   <p>Frequently Asked Questions...</p>
   <a [routerLink]="['/docs']" fragment="title">Goto Top</a>
 </section>
+</div>
