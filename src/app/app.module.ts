@@ -49,8 +49,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CourseComponent } from './components/course/course.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
+import { LoginComponent } from './components/login/login.component';
+import { DocsComponent } from './components/docs/docs.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +94,8 @@ import { MatIconModule } from '@angular/material/icon';
     HeaderComponent,
     CourseComponent,
     CourseDetailsComponent,
+    LoginComponent,
+    DocsComponent,
   ],
   imports: [
     BrowserModule,
