@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-details',
@@ -6,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./course-details.component.css'],
 })
 export class CourseDetailsComponent {
+  constructor(private router: Router) {}
   courseList = [
     { id: 1, name: 'Angular', tutor: 'Satish' },
     { id: 2, name: 'React', tutor: 'RSK' },
@@ -16,5 +18,10 @@ export class CourseDetailsComponent {
   courseKeys: string[] = [];
   ngOnInit() {
     this.courseKeys = Object.keys(this.courseList[0]);
+  }
+
+  onSelect(course: any) {
+    console.log('Selected Course: ', course);
+    this.router.navigate(['/selectedCourse', JSON.stringify(course)]);
   }
 }

@@ -53,6 +53,7 @@ import { Router, RouterModule, RouterOutlet, Routes } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './components/login/login.component';
 import { DocsComponent } from './components/docs/docs.component';
+import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
 
 @NgModule({
   declarations: [
@@ -96,6 +97,7 @@ import { DocsComponent } from './components/docs/docs.component';
     CourseDetailsComponent,
     LoginComponent,
     DocsComponent,
+    SelectedCourseComponent,
   ],
   imports: [
     BrowserModule,
