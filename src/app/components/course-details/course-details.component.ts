@@ -22,6 +22,11 @@ export class CourseDetailsComponent {
 
   onSelect(course: any) {
     console.log('Selected Course: ', course);
-    this.router.navigate(['/selectedCourse', JSON.stringify(course)]);
+    // this.router.navigate(['/selectedCourse', JSON.stringify(course)]);
+    this.router.navigate(['/selectedCourse'], {
+      queryParams: { course: JSON.stringify(course) },
+    });
   }
 }
+
+

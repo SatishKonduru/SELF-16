@@ -33,6 +33,10 @@ const routes: Routes = [
     path: 'selectedCourse/:course',
     component: SelectedCourseComponent,
   },
+  {
+    path: 'selectedCourse',
+    component: SelectedCourseComponent,
+  },
 ];
 const routerOptions: ExtraOptions = {
   anchorScrolling: 'enabled', // ✅ enables fragment navigation
