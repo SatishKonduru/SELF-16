@@ -1,22 +1,41 @@
 <div class="container">
-  <div class="card w-50 mx-auto">
+  <div class="card w-50 mx-auto mt-4 shadow">
+    <div class="card-header text-center bg-light fw-bold">
+      Selected Course (Route Params Demo)
+    </div>
+
     <div class="card-body">
-      <div>
-        <span class="text-danger fs-6">Id: </span><span>{{ myCourse.id }}</span>
-      </div>
-      <div>
-        <span class="text-danger fs-6">Name:</span>
-        {{ myCourse.name }}
-      </div>
-      <div>
-        <span class="text-danger fs-6">Tutor:</span>
-        {{ myCourse.tutor }}
+      <div class="row mb-2 gap-2">
+        <div class="col  border">
+          <h6 class="text-primary">✅ Using paramMap.subscribe()</h6>
+          <p><strong>Id:</strong> {{ myCourseID }}</p>
+
+        </div>
+
+        <div class="col border">
+          <h6 class="text-danger">❌ Using snapshot (does NOT update)</h6>
+          <p><strong>Id:</strong> {{ snapshotCourseID }}</p>
+        </div>
       </div>
     </div>
     <div class="card-footer">
-    <button mat-button (click)="goBack()">Back</button>
-    <button mat-button color="warn" (click)="viewDetails()">View Details</button>
+      <div class="d-flex justify-content-between">
+<button mat-raised-button color="primary" (click)="previousCourse()">
+        Previous Course
+      </button>
+      <button mat-raised-button color="accent" (click)="nextCourse()">
+        Next Course
+      </button>
+      </div>
+    </div>
+    <div class="card-footer ">
+
+      <button mat-raised-button color="warn" (click)="goBack()">Back</button>
+      <button mat-raised-button color="success" (click)="viewDetails()">
+        View Details
+      </button>
+    </div>
   </div>
-  </div>
+
   <router-outlet></router-outlet>
 </div>

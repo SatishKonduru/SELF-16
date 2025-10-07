@@ -29,7 +29,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'selectedCourse/:course',
+    path: 'selectedCourse/:id',
     component: SelectedCourseComponent,
     children: [
       {

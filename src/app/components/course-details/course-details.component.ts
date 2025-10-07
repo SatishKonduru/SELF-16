@@ -26,9 +26,9 @@ export class CourseDetailsComponent {
     this.courseKeys = Object.keys(this.courseList[0]);
   }
 
-  onSelect(course: any) {
-    console.log('Selected Course: ', course);
-    this.router.navigate(['/selectedCourse', JSON.stringify(course)]);
+  onSelect(id: any) {
+    console.log('Selected Course: ', id);
+    this.router.navigate(['/selectedCourse', JSON.stringify(id)]);
     // this.router.navigate(['/selectedCourse'], {
     //   queryParams: { course: JSON.stringify(course) },
     // });
