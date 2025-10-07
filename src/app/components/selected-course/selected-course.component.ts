@@ -11,21 +11,26 @@ export class SelectedCourseComponent {
 
   myCourse: any;
   ngOnInit() {
-    // this.activatedRoute.paramMap.subscribe((params) => {
-    //   const getParams = params.get('course');
-    //   this.myCourse = JSON.parse(getParams);
-    // });
+    this.activatedRoute.paramMap.subscribe((params) => {
+      const getParams = params.get('course');
+      this.myCourse = JSON.parse(getParams);
+    });
 
     //OLD Method
     // this.activatedRoute.queryParams.subscribe((p) => {
     //   this.myCourse = JSON.parse(p['course']);
     // });
 
-    this.activatedRoute.queryParamMap.subscribe((p) => {
-      this.myCourse = JSON.parse(p.get('course'));
-    });
+    // this.activatedRoute.queryParamMap.subscribe((p) => {
+    //   this.myCourse = JSON.parse(p.get('course'));
+    // });
   }
   goBack() {
     this.router.navigate(['/courseDetails', this.myCourse.id]);
+  }
+  viewDetails() {
+    this.router.navigate(['selectedCourseDetails'], {
+      relativeTo: this.activatedRoute,
+    });
   }
 }

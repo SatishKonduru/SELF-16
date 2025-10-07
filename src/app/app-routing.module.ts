@@ -6,17 +6,15 @@ import { CourseComponent } from './components/course/course.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { DocsComponent } from './components/docs/docs.component';
 import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
+import { FileNotFoundComponent } from './components/file-not-found/file-not-found.component';
+import { SelectedCourseDetailsComponent } from './components/selected-course-details/selected-course-details.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   redirectTo: '/header',
-  //   pathMatch: 'full',
-  // },
-  // {
-  //   path: 'header',
-  //   component: HeaderComponent,
-  // },
+  {
+    path: '',
+    redirectTo: '/course',
+    pathMatch: 'full', // <-- this ensures exact empty path match
+  },
   {
     path: 'course',
     component: CourseComponent,
@@ -29,9 +27,16 @@ const routes: Routes = [
     path: 'docs',
     component: DocsComponent,
   },
+
   {
     path: 'selectedCourse/:course',
     component: SelectedCourseComponent,
+    children: [
+      {
+        path: 'selectedCourseDetails',
+        component: SelectedCourseDetailsComponent,
+      },
+    ],
   },
   {
     path: 'selectedCourse',
@@ -40,6 +45,11 @@ const routes: Routes = [
   {
     path: 'courseDetails/:id',
     component: CourseDetailsComponent,
+  },
+
+  {
+    path: '**',
+    component: FileNotFoundComponent,
   },
 ];
 const routerOptions: ExtraOptions = {

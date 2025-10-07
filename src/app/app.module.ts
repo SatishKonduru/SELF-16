@@ -54,6 +54,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { LoginComponent } from './components/login/login.component';
 import { DocsComponent } from './components/docs/docs.component';
 import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
+import { SelectedCourseDetailsComponent } from './components/selected-course-details/selected-course-details.component';
+import { FileNotFoundComponent } from './components/file-not-found/file-not-found.component';
 
 @NgModule({
   declarations: [
@@ -98,6 +100,8 @@ import { SelectedCourseComponent } from './components/selected-course/selected-c
     LoginComponent,
     DocsComponent,
     SelectedCourseComponent,
+    SelectedCourseDetailsComponent,
+    FileNotFoundComponent,
   ],
   imports: [
     BrowserModule,
