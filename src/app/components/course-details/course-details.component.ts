@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-course-details',
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./course-details.component.css'],
 })
 export class CourseDetailsComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
   courseList = [
     { id: 1, name: 'Angular', tutor: 'Satish' },
     { id: 2, name: 'React', tutor: 'RSK' },
@@ -16,7 +16,13 @@ export class CourseDetailsComponent {
     { id: 5, name: 'NodeJS', tutor: 'Renu' },
   ];
   courseKeys: string[] = [];
+  courseId: number;
   ngOnInit() {
+    this.activatedRoute.paramMap.subscribe((params) => {
+      if (params) {
+        this.courseId = parseInt(params.get('id'));
+      }
+    });
     this.courseKeys = Object.keys(this.courseList[0]);
   }
 
