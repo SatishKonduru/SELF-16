@@ -6,6 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  isLoggedIn = false;
-  repeatCount = 5;
+  // isLoggedIn = false;
+  // repeatCount = 5;
+  inputValue = ['RSK'];
+  onClick(value: any) {
+    // this.inputValue = [value];
+    this.inputValue.push(value);
+  }
+  constructor() {
+    console.log('Home Constructor called....');
+  }
 }

@@ -12,8 +12,12 @@ import { SelectedCourseDetailsComponent } from './components/selected-course-det
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/course',
+    redirectTo: '/home',
     pathMatch: 'full', // <-- this ensures exact empty path match
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
   },
   {
     path: 'course',
