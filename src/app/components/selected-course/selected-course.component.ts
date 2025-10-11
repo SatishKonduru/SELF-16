@@ -17,14 +17,14 @@ export class SelectedCourseComponent {
     this.activatedRoute.paramMap.subscribe((params) => {
       const data = params.get('id');
       if (data) {
-        this.myCourseID = JSON.parse(data);
+        this.myCourseID = parseInt(data);
       }
     });
 
     // ❌ Snapshot (only once when component is created)
     const snapshotData = this.activatedRoute.snapshot.paramMap.get('id');
     if (snapshotData) {
-      this.snapshotCourseID = JSON.parse(snapshotData);
+      this.snapshotCourseID = parseInt(snapshotData);
     }
 
     //OLD Method
