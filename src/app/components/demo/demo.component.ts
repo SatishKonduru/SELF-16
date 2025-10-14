@@ -33,11 +33,12 @@ export class DemoComponent {
   }
   ngAfterContentInit() {
     console.log("Demo's AfterContentInit() called");
-    console.log(
-      "Demo's AfterContentInit() paragraph: ",
-      this.paragraph.nativeElement.innerHTML
-    );
   }
   @ContentChild('para') paragraph: ElementRef;
-  demoMsg = 'Hi From Demo';
+  ngAfterContentChecked() {
+    console.log('AfterContentChecked() : ', this.message);
+  }
+  ngOnDestroy() {
+    console.log("Demo's OnDestroy() called...");
+  }
 }
