@@ -1,5 +1,11 @@
 <div class="container">
-  <h2 *ngFor="let msg of message">
+  <!-- <h2 *ngFor="let msg of message">
+    Message in Demo Component <span class="text-danger">{{ message }}</span>
+  </h2> -->
+  <h2 >
     Message in Demo Component <span class="text-danger">{{ message }}</span>
   </h2>
+   <h2>
+    <ng-content></ng-content>
+   </h2>
 </div>

@@ -27,6 +27,11 @@
   <div>
     <button mat-stroked-button color="warn" (click)="onClick(input.value)">Click Me</button>
   </div>
-  <app-demo [message]="inputValue"></app-demo>
+  <app-demo [message]="inputValue">
+    <p #para>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam necessitatibus expedita unde repudiandae eius ipsum officiis a officia delectus blanditiis, quasi minima maiores ut. Voluptates ullam eos labore explicabo maxime!</p>
+  </app-demo>
+
+  <ng-content></ng-content>
+  <h1 style="color: red">{{dMsg.demoMsg}}</h1>
 </div>
 
