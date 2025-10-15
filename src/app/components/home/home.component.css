@@ -1,4 +1,4 @@
-.box {
+/* .box {
   border: 1px dashed gray;
   padding: 10px;
   margin: 10px 0;
@@ -15,4 +15,26 @@
 
 .repeat {
   background-color: #bbdefb;
+} */
+
+.home-component{
+  text-align: center;
+  border: #bbb 2px solid;
+  padding: 40px 0;
+  margin: 30px 0 10px 10px;
+
 }
+.component-container{
+
+  display: flex;
+  text-align: center;
+}
+
+/* button{
+  width: 120px;
+  height: 30px;
+  border: none;
+  text-align: center;
+  background-color: coral;
+  border-radius: 5px;
+} */

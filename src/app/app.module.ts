@@ -57,6 +57,8 @@ import { SelectedCourseComponent } from './components/selected-course/selected-c
 import { SelectedCourseDetailsComponent } from './components/selected-course-details/selected-course-details.component';
 import { FileNotFoundComponent } from './components/file-not-found/file-not-found.component';
 import { DemoComponent } from './components/demo/demo.component';
+import { Comp1Component } from './components/comp1/comp1.component';
+import { Comp2Component } from './components/comp2/comp2.component';
 
 @NgModule({
   declarations: [
@@ -104,6 +106,8 @@ import { DemoComponent } from './components/demo/demo.component';
     SelectedCourseDetailsComponent,
     FileNotFoundComponent,
     DemoComponent,
+    Comp1Component,
+    Comp2Component,
   ],
   imports: [
     BrowserModule,

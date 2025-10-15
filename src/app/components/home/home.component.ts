@@ -1,10 +1,11 @@
-import { Component, ContentChild } from '@angular/core';
+import { Component, ContentChild, ViewEncapsulation } from '@angular/core';
 import { DemoComponent } from '../demo/demo.component';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+  // encapsulation: ViewEncapsulation.Emulated,
 })
 export class HomeComponent {
   myInputValue: any;
