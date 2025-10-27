@@ -8,6 +8,8 @@ import { DocsComponent } from './components/docs/docs.component';
 import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
 import { FileNotFoundComponent } from './components/file-not-found/file-not-found.component';
 import { SelectedCourseDetailsComponent } from './components/selected-course-details/selected-course-details.component';
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -18,6 +20,14 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
   },
   {
     path: 'course',
