@@ -60,6 +60,7 @@ import { DemoComponent } from './components/demo/demo.component';
 import { Comp1Component } from './components/comp1/comp1.component';
 import { Comp2Component } from './components/comp2/comp2.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -126,7 +127,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     RouterModule,
     MatIconModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
