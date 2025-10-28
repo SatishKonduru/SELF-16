@@ -67,6 +67,9 @@ import { AdminSettingsComponent } from './admin/admin-settings/admin-settings.co
 import { UnauthorizedComponent } from './unauthorized/unauthorized/unauthorized.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -121,13 +124,16 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
     AdminSettingsComponent,
     UnauthorizedComponent,
     EditProfileComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatDialogModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
+    BrowserAnimationsModule,
     MatButtonModule,
     MatSelectModule,
     MatCheckboxModule,
