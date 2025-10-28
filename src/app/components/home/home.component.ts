@@ -1,5 +1,6 @@
 import { Component, ContentChild, ViewEncapsulation } from '@angular/core';
 import { DemoComponent } from '../demo/demo.component';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -8,21 +9,36 @@ import { DemoComponent } from '../demo/demo.component';
   // encapsulation: ViewEncapsulation.Emulated,
 })
 export class HomeComponent {
-  myInputValue: any;
-  check = 0;
+  // myInputValue: any;
+  // check = 0;
 
   // isLoggedIn = false;
   // repeatCount = 5;
-  inputValue = 'RSK';
-  onClick(value: any) {
-    this.inputValue = value;
-    this.myInputValue = value;
-    // this.inputValue.push(value);
+  // inputValue = 'RSK';
+  // onClick(value: any) {
+  //   this.inputValue = value;
+  //   this.myInputValue = value;
+  //   // this.inputValue.push(value);
+  // }
+  // ngOnInit() {
+  //   setInterval(() => this.check++, 1000);
+  // }
+  // constructor() {
+  //   console.log('Home Constructor called....');
+  // }
+  constructor(private authService: AuthService) {}
+  loginAsAdmin() {
+    this.authService.login('admin');
+    alert('Logged in as Admin ✅');
   }
-  ngOnInit() {
-    setInterval(() => this.check++, 1000);
+
+  loginAsUser() {
+    this.authService.login('user');
+    alert('Logged in as User ⚠️');
   }
-  constructor() {
-    console.log('Home Constructor called....');
+
+  logout() {
+    this.authService.logout();
+    alert('Logged out ❌');
   }
 }

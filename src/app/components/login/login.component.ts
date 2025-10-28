@@ -12,12 +12,12 @@ export class LoginComponent {
   password = '';
   constructor(private authService: AuthService, private router: Router) {}
 
-  onLogin() {
-    const success = this.authService.login(this.username, this.password);
-    if (success) {
-      this.router.navigate(['/dashboard']);
-    } else {
-      alert('Invalid credentials!');
-    }
-  }
+  // onLogin() {
+  //   const success = this.authService.login(this.username, this.password);
+  //   if (success) {
+  //     this.router.navigate(['/dashboard']);
+  //   } else {
+  //     alert('Invalid credentials!');
+  //   }
+  // }
 }

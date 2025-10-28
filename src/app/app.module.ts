@@ -61,6 +61,10 @@ import { Comp1Component } from './components/comp1/comp1.component';
 import { Comp2Component } from './components/comp2/comp2.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthService } from './services/auth.service';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
+import { AdminSettingsComponent } from './admin/admin-settings/admin-settings.component';
+import { UnauthorizedComponent } from './unauthorized/unauthorized/unauthorized.component';
 
 @NgModule({
   declarations: [
@@ -111,6 +115,10 @@ import { AuthService } from './services/auth.service';
     Comp1Component,
     Comp2Component,
     DashboardComponent,
+    AdminDashboardComponent,
+    AdminUsersComponent,
+    AdminSettingsComponent,
+    UnauthorizedComponent,
   ],
   imports: [
     BrowserModule,

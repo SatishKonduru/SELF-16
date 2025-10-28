@@ -11,6 +11,11 @@ import { SelectedCourseDetailsComponent } from './components/selected-course-det
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { AdminUsersComponent } from './admin/admin-users/admin-users.component';
+import { AdminSettingsComponent } from './admin/admin-settings/admin-settings.component';
+import { UnauthorizedComponent } from './unauthorized/unauthorized/unauthorized.component';
+import { AdminGuard } from './admin/admin.guard';
 
 const routes: Routes = [
   {
@@ -29,7 +34,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
   {
     path: 'course',
@@ -62,7 +67,28 @@ const routes: Routes = [
     path: 'courseDetails/:id',
     component: CourseDetailsComponent,
   },
-
+  {
+    path: 'admin',
+    canActivateChild: [AdminGuard],
+    children: [
+      {
+        path: 'dashboard',
+        component: AdminDashboardComponent,
+      },
+      {
+        path: 'users',
+        component: AdminUsersComponent,
+      },
+      {
+        path: 'settings',
+        component: AdminSettingsComponent,
+      },
+    ],
+  },
+  {
+    path: 'unauthorized',
+    component: UnauthorizedComponent,
+  },
   {
     path: '**',
     component: FileNotFoundComponent,
