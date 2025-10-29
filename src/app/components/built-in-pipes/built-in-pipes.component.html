@@ -1,0 +1,16 @@
+<div class="container">
+  <p>'satish' in uppercase: {{ "satish" | uppercase }}</p>
+  <p>'SATISH' in lowercase: {{ "SATISH" | lowercase }}</p>
+  <p>'satish konduru' in Title Case: {{ "satish konduru" | titlecase }}</p>
+  <p>'emp' Object into jSON : {{ emp | json }}</p>
+  <p>1234 number with camma : {{ 1234 | number }}</p>
+  <p>1234 number in decimal : {{ 1234 | number : "1.2" }}</p>
+  <p>1234 number in decimal : {{ 1234 | number : "5.2" }}</p>
+  <p>1234.567 number in decimal : {{ 1234.567 | number : "3.1-2" }}</p>
+  <p>0.67 in percentge: {{ 0.67 | percent }}</p>
+  <p>Date: {{ todayDate | date }}</p>
+  <p>Date in dd/MM/YYYY : {{ todayDate | date : "dd/MM/YYYY" }}</p>
+  <p>Date in MM/dd/YYYY : {{ todayDate | date : "MM/dd/YYYY" }}</p>
+  <p>Short Date: {{ todayDate | date : "short" }}</p>
+  <p>Short date without Time: {{ todayDate | date : "shortDate" }}</p>
+</div>
