@@ -6,6 +6,7 @@ import { AuthService } from 'src/app/services/auth.service';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
+  preserveWhitespaces: true,
   // encapsulation: ViewEncapsulation.Emulated,
 })
 export class HomeComponent {

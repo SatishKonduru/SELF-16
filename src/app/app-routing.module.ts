@@ -19,6 +19,7 @@ import { AdminGuard } from './admin/admin.guard';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { CanDeactivateGuard } from './guards/can-deactivate.guard';
 import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
+import { CusotmPipeComponent } from './components/cusotm-pipe/cusotm-pipe.component';
 
 const routes: Routes = [
   {
@@ -100,6 +101,10 @@ const routes: Routes = [
   {
     path: 'built-in-pipes',
     component: BuiltInPipesComponent,
+  },
+  {
+    path: 'custom-pipe',
+    component: CusotmPipeComponent,
   },
   {
     path: '**',

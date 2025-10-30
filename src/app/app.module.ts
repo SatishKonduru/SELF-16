@@ -70,9 +70,12 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
+import { PercentagePipe } from './pipes/percentage.pipe';
+import { CusotmPipeComponent } from './components/cusotm-pipe/cusotm-pipe.component';
 
 @NgModule({
   declarations: [
+    PercentagePipe,
     AppComponent,
     TestComponent,
     InterpolationComponent,
@@ -127,6 +130,8 @@ import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipe
     EditProfileComponent,
     ConfirmDialogComponent,
     BuiltInPipesComponent,
+    PercentagePipe,
+    CusotmPipeComponent,
   ],
   imports: [
     BrowserModule,
