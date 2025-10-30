@@ -27,3 +27,38 @@
   </h1>
 </div>
 </div>
+<div class="container mt-3">
+  <div class="row col-8 mx-auto">
+    <mat-form-field appearance="outline">
+      <mat-label>Filter By...</mat-label>
+      <mat-select [value]="filterText" (selectionChange)="onSelect($event)">
+        <mat-option value="all">All</mat-option>
+        <mat-option value="Male">Male</mat-option>
+        <mat-option value="Female">Female</mat-option>
+
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="row col-10 mx-auto">
+    <table class="table table-responsive table-hover table-light">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let std of students | filter : filterText">
+          <td>{{std.name}}</td>
+          <td>{{std.age}}</td>
+          <td>{{std.gender}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row col-6 mx-auto">
+    <button mat-button color="primary"
+    (click)="addNewStudent()">Add New Student</button>
+  </div>
+</div>

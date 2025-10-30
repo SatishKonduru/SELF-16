@@ -72,10 +72,12 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
 import { PercentagePipe } from './pipes/percentage.pipe';
 import { CusotmPipeComponent } from './components/cusotm-pipe/cusotm-pipe.component';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     PercentagePipe,
+    FilterPipe,
     AppComponent,
     TestComponent,
     InterpolationComponent,
@@ -132,6 +134,7 @@ import { CusotmPipeComponent } from './components/cusotm-pipe/cusotm-pipe.compon
     BuiltInPipesComponent,
     PercentagePipe,
     CusotmPipeComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,8 @@ export class CusotmPipeComponent {
   // score = 777;
   score: any;
   total = 1000;
-  filterText = 'all';
+  filterText: any;
+  filteredData: any;
   students = [
     { name: 'Satish', age: 45, gender: 'Male' },
     { name: 'Renu', age: 37, gender: 'Female' },
@@ -19,5 +20,23 @@ export class CusotmPipeComponent {
   ];
   onClick(marks: any) {
     this.score = marks;
+  }
+  onSelect(e: any) {
+    this.filterText = e.value;
+    // if (this.filterText === 'all') {
+    //   this.filteredData = this.students;
+    // } else {
+    //   this.filteredData = this.students.filter(
+    //     (s) => s.gender === this.filterText
+    //   );
+    // }
+  }
+  addNewStudent() {
+    const newStudent = {
+      name: 'Chikkie',
+      age: 13,
+      gender: 'Female',
+    };
+    this.students.push(newStudent);
   }
 }
