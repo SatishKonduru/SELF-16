@@ -63,7 +63,7 @@
   <h2>Home Component</h2>
 </div> -->
 
-<div class="container">
+<!-- <div class="container">
    <h1>CanActivateChild Demo</h1>
    <div class="d-flex gap-3">
      <button mat-raised-button color="primary"  (click)="loginAsAdmin()">Admin</button>
@@ -84,4 +84,17 @@
   <button mat-stroked-button color="warn" [routerLink]="['/edit-profile']">Edit Profile</button>
   <button mat-stroked-button color="primary" [routerLink]="['/built-in-pipes']">Built-in Pipes</button>
   <button mat-stroked-button color="warn" [routerLink]="['/custom-pipe']">Custom Pipe</button>
+</div> -->
+<div class="container">
+  <h2>🏠 Welcome to E-Learning App</h2>
+<p>Navigate to explore other sections:</p>
+
+<nav>
+  <a routerLink="/e-learning-courses">Go to Courses</a> |
+  <a routerLink="/e-learning-admin">Go to Admin</a> |
+  <a routerLink="/e-learning-auth">Go to Auth</a>
+</nav>
+
+<router-outlet></router-outlet>
+
 </div>

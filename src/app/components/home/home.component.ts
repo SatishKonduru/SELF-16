@@ -28,18 +28,18 @@ export class HomeComponent {
   //   console.log('Home Constructor called....');
   // }
   constructor(private authService: AuthService) {}
-  loginAsAdmin() {
-    this.authService.login('admin');
-    alert('Logged in as Admin ✅');
-  }
+  // loginAsAdmin() {
+  //   this.authService.login('admin');
+  //   alert('Logged in as Admin ✅');
+  // }
 
-  loginAsUser() {
-    this.authService.login('user');
-    alert('Logged in as User ⚠️');
-  }
+  // loginAsUser() {
+  //   this.authService.login('user');
+  //   alert('Logged in as User ⚠️');
+  // }
 
-  logout() {
-    this.authService.logout();
-    alert('Logged out ❌');
-  }
+  // logout() {
+  //   this.authService.logout();
+  //   alert('Logged out ❌');
+  // }
 }

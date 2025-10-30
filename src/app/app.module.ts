@@ -7,15 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TestComponent } from './components/test/test.component';
 import { InterpolationComponent } from './components/interpolation/interpolation.component';
 import { PropertyBindingComponent } from './components/property-binding/property-binding.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+
 import { StyleBindingComponent } from './components/style-binding/style-binding.component';
 import { ClassBindingComponent } from './components/class-binding/class-binding.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatRadioModule } from '@angular/material/radio';
+
 import { TempRefVariablesComponent } from './components/temp-ref-variables/temp-ref-variables.component';
 import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
 import { FormsModule } from '@angular/forms';
@@ -46,11 +42,11 @@ import { HomeComponent } from './components/home/home.component';
 import { IfNotDirective } from './directives/if-not.directive';
 import { RepeatDirective } from './directives/repeat.directive';
 import { HeaderComponent } from './components/header/header.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
+
 import { CourseComponent } from './components/course/course.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { Router, RouterModule, RouterOutlet, Routes } from '@angular/router';
-import { MatIconModule } from '@angular/material/icon';
+
 import { LoginComponent } from './components/login/login.component';
 import { DocsComponent } from './components/docs/docs.component';
 import { SelectedCourseComponent } from './components/selected-course/selected-course.component';
@@ -68,11 +64,13 @@ import { UnauthorizedComponent } from './unauthorized/unauthorized/unauthorized.
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
-import { MatDialogModule } from '@angular/material/dialog';
+
 import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
 import { PercentagePipe } from './pipes/percentage.pipe';
 import { CusotmPipeComponent } from './components/cusotm-pipe/cusotm-pipe.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { ELearningHomeModule } from './modules/e-learning-home/e-learning-home.module';
+import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
 
 @NgModule({
   declarations: [
@@ -139,19 +137,11 @@ import { FilterPipe } from './pipes/filter.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatDialogModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatCheckboxModule,
-    MatRadioModule,
     FormsModule,
-    MatToolbarModule,
+    BrowserAnimationsModule,
     RouterModule,
-    MatIconModule,
+    ELearningHomeModule,
+    AngularMaterialModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
