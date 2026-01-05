@@ -20,12 +20,17 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { CanDeactivateGuard } from './guards/can-deactivate.guard';
 import { BuiltInPipesComponent } from './components/built-in-pipes/built-in-pipes.component';
 import { CusotmPipeComponent } from './components/cusotm-pipe/cusotm-pipe.component';
+import { TdfRegisterComponent } from './forms/tdf-register/tdf-register.component';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: '/home',
     pathMatch: 'full', // <-- this ensures exact empty path match
+  },
+  {
+    path: 'tdfRegister',
+    component: TdfRegisterComponent,
   },
   {
     path: 'home',
@@ -106,9 +111,27 @@ const routes: Routes = [
     path: 'custom-pipe',
     component: CusotmPipeComponent,
   },
-  { path: 'e-learning-courses', loadChildren: () => import('./modules/e-learning-courses/e-learning-courses.module').then(m => m.ELearningCoursesModule) },
-  { path: 'e-learning-admin', loadChildren: () => import('./modules/e-learning-admin/e-learning-admin.module').then(m => m.ELearningAdminModule) },
-  { path: 'e-learning-auth', loadChildren: () => import('./modules/e-learning-auth/e-learning-auth.module').then(m => m.ELearningAuthModule) },
+  {
+    path: 'e-learning-courses',
+    loadChildren: () =>
+      import('./modules/e-learning-courses/e-learning-courses.module').then(
+        (m) => m.ELearningCoursesModule
+      ),
+  },
+  {
+    path: 'e-learning-admin',
+    loadChildren: () =>
+      import('./modules/e-learning-admin/e-learning-admin.module').then(
+        (m) => m.ELearningAdminModule
+      ),
+  },
+  {
+    path: 'e-learning-auth',
+    loadChildren: () =>
+      import('./modules/e-learning-auth/e-learning-auth.module').then(
+        (m) => m.ELearningAuthModule
+      ),
+  },
   {
     path: '**',
     component: FileNotFoundComponent,

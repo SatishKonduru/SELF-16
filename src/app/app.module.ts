@@ -71,6 +71,8 @@ import { CusotmPipeComponent } from './components/cusotm-pipe/cusotm-pipe.compon
 import { FilterPipe } from './pipes/filter.pipe';
 import { ELearningHomeModule } from './modules/e-learning-home/e-learning-home.module';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
+import { TdfRegisterComponent } from './forms/tdf-register/tdf-register.component';
+import { NativeDateAdapter } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -133,6 +135,7 @@ import { AngularMaterialModule } from './modules/angular-material/angular-materi
     PercentagePipe,
     CusotmPipeComponent,
     FilterPipe,
+    TdfRegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -143,7 +146,7 @@ import { AngularMaterialModule } from './modules/angular-material/angular-materi
     ELearningHomeModule,
     AngularMaterialModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, NativeDateAdapter],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
