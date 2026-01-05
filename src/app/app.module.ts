@@ -146,7 +146,7 @@ import { NativeDateAdapter } from '@angular/material/core';
     ELearningHomeModule,
     AngularMaterialModule,
   ],
-  providers: [AuthService, NativeDateAdapter],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

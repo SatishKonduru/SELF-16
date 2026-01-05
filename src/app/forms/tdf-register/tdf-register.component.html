@@ -1,5 +1,5 @@
 <div class="container mt-3 mx-auto">
-  <div class="col-12 mat-elevation-z10 p-2">
+  <div class="mat-elevation-z10 p-2 rounded-3">
     <div class="row">
       <h3>Register Form (TDF)</h3>
     </div>
@@ -27,5 +27,101 @@
         <input matInput />
       </mat-form-field>
     </div>
+
+    <!-- For Phone and DOB -->
+     <div class="row mt-3">
+      <div class="col-6">
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Phone:</mat-label>
+          <input matInput />
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Date of Birth:</mat-label>
+          <input matInput  [matDatepicker]="picker">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- For Gender -->
+     <div class="row mt-3">
+      <mat-label>Gender:</mat-label>
+      <mat-radio-group>
+        <mat-radio-button value="Male" checked>Male</mat-radio-button>
+        <mat-radio-button value="Female" >Female</mat-radio-button>
+        <mat-radio-button value="Other" >Prefer Not to say!</mat-radio-button>
+      </mat-radio-group>
+     </div>
+
+     <!-- For Address -->
+      <div class="row top-3">
+        <mat-label>Address:</mat-label>
+        <!-- for Address line 1 -->
+        <div class="row">
+          <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Address-1</mat-label>
+          <input matInput>
+        </mat-form-field>
+        </div>
+
+        <!-- for Address line 2 -->
+        <div class="row">
+          <mat-form-field appearance="outline" style="width: 100%">
+          <mat-label>Address-2</mat-label>
+          <input matInput>
+        </mat-form-field>
+        </div>
+
+        <!-- for Country  and State-->
+        <div class="row">
+          <div class="col-6">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Country</mat-label>
+              <mat-select>
+                  <mat-option value="India">India</mat-option>
+                  <mat-option value="USA">USA</mat-option>
+                  <mat-option value="Australia">Australia</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <!-- for State -->
+           <div class="col-6">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>State</mat-label>
+              <mat-select>
+                  <mat-option value="Andha Pradesh">Andhra Pradesh</mat-option>
+                  <mat-option value="Telangana">Telangana</mat-option>
+                  <mat-option value="Tamilnadu">Tamilnadu</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <!-- for City and PinCode-->
+         <div class="row">
+          <div class="col-6">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>City</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field appearance="outline" style="width: 100%">
+              <mat-label>Pincode</mat-label>
+              <input matInput>
+            </mat-form-field>
+          </div>
+         </div>
+      </div>
+      <div class="row">
+          <div class="text-center">
+                <button mat-raised-button color="warn">Submit</button>
+          </div>
+      </div>
   </div>
+
 </div>
