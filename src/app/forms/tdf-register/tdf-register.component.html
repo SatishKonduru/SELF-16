@@ -81,7 +81,8 @@
      </div>
 
      <!-- For Address -->
-      <div class="row top-3">
+      <div class="row top-3" ngModelGroup="address"
+      #addr="ngModelGroup">
         <mat-label>Address:</mat-label>
         <!-- for Address line 1 -->
         <div class="row">
@@ -95,7 +96,7 @@
         <div class="row">
           <mat-form-field appearance="outline" style="width: 100%">
           <mat-label>Address-2</mat-label>
-          <input matInput name="address2" ngModel>
+          <input matInput name="address2" ngModel required>
         </mat-form-field>
         </div>
 
@@ -140,10 +141,14 @@
           </div>
          </div>
       </div>
+      <!-- address Validation -->
+       <div *ngIf="addr.invalid">
+        <span style="color:red">Some Address fields are missing</span>
+       </div>
       <div class="row">
           <div class="text-center">
                 <button mat-raised-button type="submit" color="primary"
-                [disabled]="!(registerForm.dirty && registerForm.valid)">Submit</button>
+                >Submit</button>
           </div>
       </div>
     </form>
