@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-register',
@@ -17,6 +22,12 @@ export class ReactiveRegisterComponent {
       email: ['', [Validators.required, Validators.email]],
       gender: ['male'],
       country: ['', Validators.required],
+      address: new FormGroup({
+        address1: new FormControl(null),
+        address2: new FormControl(null),
+        city: new FormControl(null),
+        pincode: new FormControl(null),
+      }),
       agree: [false, Validators.requiredTrue],
     });
   }
