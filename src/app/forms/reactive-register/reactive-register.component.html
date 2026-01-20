@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="mat-elevation-z10 mt-4 mx-auto col-10 rounded-2">
+    <div class="col-10 text-center mb-4">
+      <h5>Reactive Forms</h5>
+    </div>
+    <div class="col-6 mx-auto">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="col-6">
+          <!-- USERNAME -->
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="username" />
+
+            <mat-error
+              *ngIf="
+                registerForm.get('username')?.touched &&
+                registerForm.get('username')?.invalid
+              "
+            >
+              Username is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-6">
+          <!-- EMAIL -->
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" />
+
+            <mat-error *ngIf="registerForm.get('email')?.errors?.['email']">
+              Invalid email format
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="col-10">
+          <!-- GENDER -->
+          <mat-label>Gender</mat-label>
+          <mat-radio-group formControlName="gender">
+            <mat-radio-button value="male"> Male </mat-radio-button>
+            <mat-radio-button value="female"> Female </mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <div class="col-6">
+          <mat-form-field appearance="outline">
+            <!-- COUNTRY -->
+            <mat-select formControlName="country">
+              <mat-option value="">Select</mat-option>
+              <mat-option value="INDIA">INDIA</mat-option>
+              <mat-option value="USA">USA</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="col-10">
+          <!-- CHECKBOX -->
+          <mat-checkbox formControlName="agree">I agree to terms</mat-checkbox>
+        </div>
+
+        <div class="col-6 text-center p-4">
+          <button
+            mat-stroked-button
+            type="submit"
+            [disabled]="registerForm.invalid"
+            color="accent"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

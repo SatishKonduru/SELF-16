@@ -14,7 +14,7 @@ import { EventBindingComponent } from './components/event-binding/event-binding.
 
 import { TempRefVariablesComponent } from './components/temp-ref-variables/temp-ref-variables.component';
 import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IfComponent } from './components/if/if.component';
 import { SwitchComponent } from './components/switch/switch.component';
 import { ForComponent } from './components/for/for.component';
@@ -73,6 +73,7 @@ import { ELearningHomeModule } from './modules/e-learning-home/e-learning-home.m
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
 import { TdfRegisterComponent } from './forms/tdf-register/tdf-register.component';
 import { NativeDateAdapter } from '@angular/material/core';
+import { ReactiveRegisterComponent } from './forms/reactive-register/reactive-register.component';
 
 @NgModule({
   declarations: [
@@ -136,6 +137,7 @@ import { NativeDateAdapter } from '@angular/material/core';
     CusotmPipeComponent,
     FilterPipe,
     TdfRegisterComponent,
+    ReactiveRegisterComponent,
   ],
   imports: [
     BrowserModule,
@@ -145,6 +147,7 @@ import { NativeDateAdapter } from '@angular/material/core';
     RouterModule,
     ELearningHomeModule,
     AngularMaterialModule,
+    ReactiveFormsModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent],
