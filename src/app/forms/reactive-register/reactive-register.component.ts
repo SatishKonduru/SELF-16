@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {
+  FormArray,
   FormBuilder,
   FormControl,
   FormGroup,
@@ -28,6 +29,11 @@ export class ReactiveRegisterComponent {
         city: new FormControl(null),
         pincode: new FormControl(null),
       }),
+      skills: new FormArray([
+        new FormControl(null),
+        new FormControl(null),
+        new FormControl(null),
+      ]),
       agree: [false, Validators.requiredTrue],
     });
   }
