@@ -41,4 +41,11 @@ export class ReactiveRegisterComponent {
   onSubmit() {
     console.log(this.registerForm.value);
   }
+  addSkill() {
+    (<FormArray>this.registerForm.controls.skills).push(new FormControl(null));
+  }
+  deleteSkill(index: any) {
+    const control = <FormArray>this.registerForm.controls.skills;
+    control.removeAt(index);
+  }
 }

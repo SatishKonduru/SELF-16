@@ -3,7 +3,7 @@
     <div class="col-10 text-center mb-4">
       <h5>Reactive Forms</h5>
     </div>
-    <div class="col-6 mx-auto">
+    <div class="col-12 mx-auto p-3">
       <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
         <div class="col-6">
           <!-- USERNAME -->
@@ -82,15 +82,27 @@
           <label>Skills:</label>
           <div *ngFor="let control of registerForm.controls.skills['controls']; let i = index">
 
-            <div class="col-6" formArrayName="skills">
-              <mat-form-field appearance="outline">
+            <div class="col-10" formArrayName="skills">
+              <div class="row justify-content-center align-items-center d-flex">
+                <div class="col-6">
+                  <mat-form-field appearance="outline">
                 <mat-label>Skill</mat-label>
                 <input matInput [formControlName]="i">
+
               </mat-form-field>
+                </div>
+                <div class="col-3">
+<button mat-button (click)="deleteSkill(i)">Delete</button>
+                </div>
+
+              </div>
+
             </div>
           </div>
 
-
+          <div class="col-6">
+            <button mat-stroked-button color="accent" (click)="addSkill()">Add Skill</button>
+          </div>
 
         <div class="col-10">
           <!-- CHECKBOX -->
